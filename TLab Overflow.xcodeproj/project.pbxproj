@@ -12,6 +12,7 @@
 		8F77D41620C697A1003B26C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F77D41420C697A1003B26C5 /* Main.storyboard */; };
 		8F77D41820C697A5003B26C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F77D41720C697A5003B26C5 /* Assets.xcassets */; };
 		8F77D41B20C697A5003B26C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F77D41920C697A5003B26C5 /* LaunchScreen.storyboard */; };
+		D6913ECAA3F6697432F54817 /* Pods_TLab_Overflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		8F77D41720C697A5003B26C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F77D41A20C697A5003B26C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F77D41C20C697A5003B26C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7368541C155911D2F997147 /* Pods-TLab Overflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.release.xcconfig"; sourceTree = "<group>"; };
+		E44362F829C09B18338DD8E3 /* Pods-TLab Overflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.debug.xcconfig"; sourceTree = "<group>"; };
+		EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLab_Overflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6913ECAA3F6697432F54817 /* Pods_TLab_Overflow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47E2932468542CD75CCCA8C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F38FF3C416EBC025B8B9142 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E44362F829C09B18338DD8E3 /* Pods-TLab Overflow.debug.xcconfig */,
+				A7368541C155911D2F997147 /* Pods-TLab Overflow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8F77D40420C697A1003B26C5 = {
 			isa = PBXGroup;
 			children = (
 				8F77D40F20C697A1003B26C5 /* TLab Overflow */,
 				8F77D40E20C697A1003B26C5 /* Products */,
+				8F38FF3C416EBC025B8B9142 /* Pods */,
+				47E2932468542CD75CCCA8C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F77D41F20C697A5003B26C5 /* Build configuration list for PBXNativeTarget "TLab Overflow" */;
 			buildPhases = (
+				5B2FCF0233B0941FA22CAB8D /* [CP] Check Pods Manifest.lock */,
 				8F77D40920C697A1003B26C5 /* Sources */,
 				8F77D40A20C697A1003B26C5 /* Frameworks */,
 				8F77D40B20C697A1003B26C5 /* Resources */,
+				D77F163714923F710FEFA28C /* [CP] Embed Pods Frameworks */,
+				5FAC4A4E8028D5A5432C43F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B2FCF0233B0941FA22CAB8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TLab Overflow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FAC4A4E8028D5A5432C43F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77F163714923F710FEFA28C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F77D40920C697A1003B26C5 /* Sources */ = {
@@ -278,16 +356,18 @@
 		};
 		8F77D42020C697A5003B26C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44362F829C09B18338DD8E3 /* Pods-TLab Overflow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5CT794W3M;
 				INFOPLIST_FILE = "TLab Overflow/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.tlab.TLab-Overflow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,16 +375,18 @@
 		};
 		8F77D42120C697A5003B26C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7368541C155911D2F997147 /* Pods-TLab Overflow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5CT794W3M;
 				INFOPLIST_FILE = "TLab Overflow/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.tlab.TLab-Overflow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
