@@ -12,6 +12,36 @@
 		8F77D41620C697A1003B26C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F77D41420C697A1003B26C5 /* Main.storyboard */; };
 		8F77D41820C697A5003B26C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F77D41720C697A5003B26C5 /* Assets.xcassets */; };
 		8F77D41B20C697A5003B26C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F77D41920C697A5003B26C5 /* LaunchScreen.storyboard */; };
+		8FCC5E1020C749C40015D9D6 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DD520C749C30015D9D6 /* Mark Simonson - Proxima Nova Extrabold.otf */; };
+		8FCC5E1120C749C40015D9D6 /* Mark Simonson - Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DD620C749C30015D9D6 /* Mark Simonson - Proxima Nova Bold.otf */; };
+		8FCC5E1220C749C40015D9D6 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DD720C749C30015D9D6 /* Mark Simonson - Proxima Nova Bold Italic.otf */; };
+		8FCC5E1320C749C40015D9D6 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DD820C749C30015D9D6 /* Mark Simonson - Proxima Nova Black Italic.otf */; };
+		8FCC5E1420C749C40015D9D6 /* Mark Simonson - Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DD920C749C30015D9D6 /* Mark Simonson - Proxima Nova Thin.otf */; };
+		8FCC5E1520C749C40015D9D6 /* Mark Simonson - Proxima Nova Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DDA20C749C30015D9D6 /* Mark Simonson - Proxima Nova Light.otf */; };
+		8FCC5E1620C749C40015D9D6 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DDB20C749C30015D9D6 /* Mark Simonson - Proxima Nova Thin Italic.otf */; };
+		8FCC5E1720C749C40015D9D6 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DDC20C749C30015D9D6 /* Mark Simonson - Proxima Nova Regular Italic.otf */; };
+		8FCC5E1820C749C40015D9D6 /* Mark Simonson - Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DDD20C749C30015D9D6 /* Mark Simonson - Proxima Nova Black.otf */; };
+		8FCC5E1920C749C40015D9D6 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DDE20C749C30015D9D6 /* Mark Simonson - Proxima Nova Semibold.otf */; };
+		8FCC5E1A20C749C40015D9D6 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DDF20C749C30015D9D6 /* Mark Simonson - Proxima Nova Extrabold Italic.otf */; };
+		8FCC5E1B20C749C40015D9D6 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DE020C749C30015D9D6 /* Mark Simonson - Proxima Nova Light Italic.otf */; };
+		8FCC5E1C20C749C40015D9D6 /* Mark Simonson - Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DE120C749C30015D9D6 /* Mark Simonson - Proxima Nova Regular.otf */; };
+		8FCC5E1D20C749C40015D9D6 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5DE220C749C30015D9D6 /* Mark Simonson - Proxima Nova Semibold Italic.otf */; };
+		8FCC5E2620C749C40015D9D6 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5DF920C749C30015D9D6 /* AppCore.swift */; };
+		8FCC5E2720C749C40015D9D6 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5DFA20C749C30015D9D6 /* ApiConfig.swift */; };
+		8FCC5E2820C749C50015D9D6 /* AppCoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5DFB20C749C30015D9D6 /* AppCoreService.swift */; };
+		8FCC5E2B20C749C50015D9D6 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0020C749C40015D9D6 /* ErrorHelper.swift */; };
+		8FCC5E2D20C749C50015D9D6 /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0220C749C40015D9D6 /* DetachableObject.swift */; };
+		8FCC5E2E20C749C50015D9D6 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0320C749C40015D9D6 /* AppUtility.swift */; };
+		8FCC5E3120C749C50015D9D6 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0620C749C40015D9D6 /* PreferenceManager.swift */; };
+		8FCC5E3320C749C50015D9D6 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0820C749C40015D9D6 /* DateHelper.swift */; };
+		8FCC5E3520C749C50015D9D6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0B20C749C40015D9D6 /* UIColor+Extension.swift */; };
+		8FCC5E3620C749C50015D9D6 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0C20C749C40015D9D6 /* UIViewController+Additions.swift */; };
+		8FCC5E3720C749C50015D9D6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0D20C749C40015D9D6 /* UIViewExtension.swift */; };
+		8FCC5E3820C749C50015D9D6 /* ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0E20C749C40015D9D6 /* ISO8601.swift */; };
+		8FCC5E3920C749C50015D9D6 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E0F20C749C40015D9D6 /* UIFontExtension.swift */; };
+		8FCC5E3B20C74A8F0015D9D6 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E3A20C74A8F0015D9D6 /* Context.swift */; };
+		8FCC5E4420C751AA0015D9D6 /* InputSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E4320C751AA0015D9D6 /* InputSearchCell.swift */; };
+		8FCC5E4620C751C20015D9D6 /* ResultSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E4520C751C20015D9D6 /* ResultSearchCell.swift */; };
 		D6913ECAA3F6697432F54817 /* Pods_TLab_Overflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +53,36 @@
 		8F77D41720C697A5003B26C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F77D41A20C697A5003B26C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F77D41C20C697A5003B26C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FCC5DD520C749C30015D9D6 /* Mark Simonson - Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		8FCC5DD620C749C30015D9D6 /* Mark Simonson - Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		8FCC5DD720C749C30015D9D6 /* Mark Simonson - Proxima Nova Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Bold Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DD820C749C30015D9D6 /* Mark Simonson - Proxima Nova Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Black Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DD920C749C30015D9D6 /* Mark Simonson - Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		8FCC5DDA20C749C30015D9D6 /* Mark Simonson - Proxima Nova Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Light.otf"; sourceTree = "<group>"; };
+		8FCC5DDB20C749C30015D9D6 /* Mark Simonson - Proxima Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Thin Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DDC20C749C30015D9D6 /* Mark Simonson - Proxima Nova Regular Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Regular Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DDD20C749C30015D9D6 /* Mark Simonson - Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		8FCC5DDE20C749C30015D9D6 /* Mark Simonson - Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
+		8FCC5DDF20C749C30015D9D6 /* Mark Simonson - Proxima Nova Extrabold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Extrabold Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DE020C749C30015D9D6 /* Mark Simonson - Proxima Nova Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Light Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DE120C749C30015D9D6 /* Mark Simonson - Proxima Nova Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Regular.otf"; sourceTree = "<group>"; };
+		8FCC5DE220C749C30015D9D6 /* Mark Simonson - Proxima Nova Semibold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Semibold Italic.otf"; sourceTree = "<group>"; };
+		8FCC5DF920C749C30015D9D6 /* AppCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		8FCC5DFA20C749C30015D9D6 /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		8FCC5DFB20C749C30015D9D6 /* AppCoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoreService.swift; sourceTree = "<group>"; };
+		8FCC5E0020C749C40015D9D6 /* ErrorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
+		8FCC5E0220C749C40015D9D6 /* DetachableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
+		8FCC5E0320C749C40015D9D6 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		8FCC5E0620C749C40015D9D6 /* PreferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		8FCC5E0820C749C40015D9D6 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		8FCC5E0B20C749C40015D9D6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		8FCC5E0C20C749C40015D9D6 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		8FCC5E0D20C749C40015D9D6 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8FCC5E0E20C749C40015D9D6 /* ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601.swift; sourceTree = "<group>"; };
+		8FCC5E0F20C749C40015D9D6 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		8FCC5E3A20C74A8F0015D9D6 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		8FCC5E4320C751AA0015D9D6 /* InputSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSearchCell.swift; sourceTree = "<group>"; };
+		8FCC5E4520C751C20015D9D6 /* ResultSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCell.swift; sourceTree = "<group>"; };
 		A7368541C155911D2F997147 /* Pods-TLab Overflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.release.xcconfig"; sourceTree = "<group>"; };
 		E44362F829C09B18338DD8E3 /* Pods-TLab Overflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.debug.xcconfig"; sourceTree = "<group>"; };
 		EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLab_Overflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,14 +138,132 @@
 		8F77D40F20C697A1003B26C5 /* TLab Overflow */ = {
 			isa = PBXGroup;
 			children = (
+				8FCC5E4120C74C010015D9D6 /* Cell */,
+				8FCC5E4020C74BE40015D9D6 /* ViewController */,
+				8FCC5E3F20C74BD40015D9D6 /* Model */,
+				8FCC5E3E20C74BCA0015D9D6 /* Interactor */,
+				8FCC5E3D20C74BBD0015D9D6 /* XIB FIles */,
+				8FCC5E3C20C74B980015D9D6 /* Stroryboard */,
+				8FCC5DF820C749C30015D9D6 /* AppCore */,
+				8FCC5DD320C749C30015D9D6 /* Assets */,
+				8FCC5E0A20C749C40015D9D6 /* Extentions */,
+				8FCC5DFD20C749C40015D9D6 /* Helpers */,
 				8F77D41020C697A1003B26C5 /* AppDelegate.swift */,
-				8F77D41220C697A1003B26C5 /* ViewController.swift */,
-				8F77D41420C697A1003B26C5 /* Main.storyboard */,
 				8F77D41720C697A5003B26C5 /* Assets.xcassets */,
-				8F77D41920C697A5003B26C5 /* LaunchScreen.storyboard */,
 				8F77D41C20C697A5003B26C5 /* Info.plist */,
 			);
 			path = "TLab Overflow";
+			sourceTree = "<group>";
+		};
+		8FCC5DD320C749C30015D9D6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC5DD420C749C30015D9D6 /* Font */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8FCC5DD420C749C30015D9D6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC5DD520C749C30015D9D6 /* Mark Simonson - Proxima Nova Extrabold.otf */,
+				8FCC5DD620C749C30015D9D6 /* Mark Simonson - Proxima Nova Bold.otf */,
+				8FCC5DD720C749C30015D9D6 /* Mark Simonson - Proxima Nova Bold Italic.otf */,
+				8FCC5DD820C749C30015D9D6 /* Mark Simonson - Proxima Nova Black Italic.otf */,
+				8FCC5DD920C749C30015D9D6 /* Mark Simonson - Proxima Nova Thin.otf */,
+				8FCC5DDA20C749C30015D9D6 /* Mark Simonson - Proxima Nova Light.otf */,
+				8FCC5DDB20C749C30015D9D6 /* Mark Simonson - Proxima Nova Thin Italic.otf */,
+				8FCC5DDC20C749C30015D9D6 /* Mark Simonson - Proxima Nova Regular Italic.otf */,
+				8FCC5DDD20C749C30015D9D6 /* Mark Simonson - Proxima Nova Black.otf */,
+				8FCC5DDE20C749C30015D9D6 /* Mark Simonson - Proxima Nova Semibold.otf */,
+				8FCC5DDF20C749C30015D9D6 /* Mark Simonson - Proxima Nova Extrabold Italic.otf */,
+				8FCC5DE020C749C30015D9D6 /* Mark Simonson - Proxima Nova Light Italic.otf */,
+				8FCC5DE120C749C30015D9D6 /* Mark Simonson - Proxima Nova Regular.otf */,
+				8FCC5DE220C749C30015D9D6 /* Mark Simonson - Proxima Nova Semibold Italic.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		8FCC5DF820C749C30015D9D6 /* AppCore */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC5DF920C749C30015D9D6 /* AppCore.swift */,
+				8FCC5DFA20C749C30015D9D6 /* ApiConfig.swift */,
+				8FCC5DFB20C749C30015D9D6 /* AppCoreService.swift */,
+			);
+			path = AppCore;
+			sourceTree = "<group>";
+		};
+		8FCC5DFD20C749C40015D9D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC5E3A20C74A8F0015D9D6 /* Context.swift */,
+				8FCC5E0020C749C40015D9D6 /* ErrorHelper.swift */,
+				8FCC5E0220C749C40015D9D6 /* DetachableObject.swift */,
+				8FCC5E0320C749C40015D9D6 /* AppUtility.swift */,
+				8FCC5E0620C749C40015D9D6 /* PreferenceManager.swift */,
+				8FCC5E0820C749C40015D9D6 /* DateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8FCC5E0A20C749C40015D9D6 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC5E0B20C749C40015D9D6 /* UIColor+Extension.swift */,
+				8FCC5E0C20C749C40015D9D6 /* UIViewController+Additions.swift */,
+				8FCC5E0D20C749C40015D9D6 /* UIViewExtension.swift */,
+				8FCC5E0E20C749C40015D9D6 /* ISO8601.swift */,
+				8FCC5E0F20C749C40015D9D6 /* UIFontExtension.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		8FCC5E3C20C74B980015D9D6 /* Stroryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8F77D41420C697A1003B26C5 /* Main.storyboard */,
+				8F77D41920C697A5003B26C5 /* LaunchScreen.storyboard */,
+			);
+			name = Stroryboard;
+			sourceTree = "<group>";
+		};
+		8FCC5E3D20C74BBD0015D9D6 /* XIB FIles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "XIB FIles";
+			sourceTree = "<group>";
+		};
+		8FCC5E3E20C74BCA0015D9D6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8FCC5E3F20C74BD40015D9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FCC5E4020C74BE40015D9D6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F77D41220C697A1003B26C5 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8FCC5E4120C74C010015D9D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC5E4320C751AA0015D9D6 /* InputSearchCell.swift */,
+				8FCC5E4520C751C20015D9D6 /* ResultSearchCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +327,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCC5E1920C749C40015D9D6 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */,
+				8FCC5E1A20C749C40015D9D6 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
+				8FCC5E1820C749C40015D9D6 /* Mark Simonson - Proxima Nova Black.otf in Resources */,
+				8FCC5E1C20C749C40015D9D6 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
+				8FCC5E1320C749C40015D9D6 /* Mark Simonson - Proxima Nova Black Italic.otf in Resources */,
+				8FCC5E1420C749C40015D9D6 /* Mark Simonson - Proxima Nova Thin.otf in Resources */,
+				8FCC5E1020C749C40015D9D6 /* Mark Simonson - Proxima Nova Extrabold.otf in Resources */,
+				8FCC5E1D20C749C40015D9D6 /* Mark Simonson - Proxima Nova Semibold Italic.otf in Resources */,
+				8FCC5E1720C749C40015D9D6 /* Mark Simonson - Proxima Nova Regular Italic.otf in Resources */,
+				8FCC5E1520C749C40015D9D6 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
+				8FCC5E1620C749C40015D9D6 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				8F77D41B20C697A5003B26C5 /* LaunchScreen.storyboard in Resources */,
+				8FCC5E1220C749C40015D9D6 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */,
+				8FCC5E1120C749C40015D9D6 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
+				8FCC5E1B20C749C40015D9D6 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,
 				8F77D41820C697A5003B26C5 /* Assets.xcassets in Resources */,
 				8F77D41620C697A1003B26C5 /* Main.storyboard in Resources */,
 			);
@@ -197,9 +389,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/ISO8601/ISO8601.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ISO8601.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -213,8 +426,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCC5E2720C749C40015D9D6 /* ApiConfig.swift in Sources */,
+				8FCC5E3B20C74A8F0015D9D6 /* Context.swift in Sources */,
 				8F77D41320C697A1003B26C5 /* ViewController.swift in Sources */,
+				8FCC5E2B20C749C50015D9D6 /* ErrorHelper.swift in Sources */,
+				8FCC5E3320C749C50015D9D6 /* DateHelper.swift in Sources */,
+				8FCC5E2E20C749C50015D9D6 /* AppUtility.swift in Sources */,
+				8FCC5E2820C749C50015D9D6 /* AppCoreService.swift in Sources */,
+				8FCC5E3920C749C50015D9D6 /* UIFontExtension.swift in Sources */,
+				8FCC5E4420C751AA0015D9D6 /* InputSearchCell.swift in Sources */,
+				8FCC5E2D20C749C50015D9D6 /* DetachableObject.swift in Sources */,
 				8F77D41120C697A1003B26C5 /* AppDelegate.swift in Sources */,
+				8FCC5E3720C749C50015D9D6 /* UIViewExtension.swift in Sources */,
+				8FCC5E2620C749C40015D9D6 /* AppCore.swift in Sources */,
+				8FCC5E3120C749C50015D9D6 /* PreferenceManager.swift in Sources */,
+				8FCC5E4620C751C20015D9D6 /* ResultSearchCell.swift in Sources */,
+				8FCC5E3620C749C50015D9D6 /* UIViewController+Additions.swift in Sources */,
+				8FCC5E3520C749C50015D9D6 /* UIColor+Extension.swift in Sources */,
+				8FCC5E3820C749C50015D9D6 /* ISO8601.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,12 +593,15 @@
 				DEVELOPMENT_TEAM = Q5CT794W3M;
 				INFOPLIST_FILE = "TLab Overflow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.tlab.TLab-Overflow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,12 +615,15 @@
 				DEVELOPMENT_TEAM = Q5CT794W3M;
 				INFOPLIST_FILE = "TLab Overflow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.tlab.TLab-Overflow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

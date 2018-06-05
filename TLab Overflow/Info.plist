@@ -39,5 +39,22 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>UIAppFonts</key>
+    <array>
+        <string>Mark Simonson - Proxima Nova Extrabold.otf</string>
+        <string>Mark Simonson - Proxima Nova Bold.otf</string>
+        <string>Mark Simonson - Proxima Nova Bold Italic.otf</string>
+        <string>Mark Simonson - Proxima Nova Black Italic.otf</string>
+        <string>Mark Simonson - Proxima Nova Thin.otf</string>
+        <string>Mark Simonson - Proxima Nova Light.otf</string>
+        <string>Mark Simonson - Proxima Nova Thin Italic.otf</string>
+        <string>Mark Simonson - Proxima Nova Regular Italic.otf</string>
+        <string>Mark Simonson - Proxima Nova Black.otf</string>
+        <string>Mark Simonson - Proxima Nova Semibold.otf</string>
+        <string>Mark Simonson - Proxima Nova Extrabold Italic.otf</string>
+        <string>Mark Simonson - Proxima Nova Light Italic.otf</string>
+        <string>Mark Simonson - Proxima Nova Regular.otf</string>
+        <string>Mark Simonson - Proxima Nova Semibold Italic.otf</string>
+    </array>
 </dict>
 </plist>
