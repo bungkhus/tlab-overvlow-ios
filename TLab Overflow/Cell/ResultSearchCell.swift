@@ -32,11 +32,9 @@ class ResultSearchCell: UITableViewCell {
                 if let owner = searchResult.owner {
                     if let name = owner.displayName, let createDate = searchResult.createDate {
                         let formatter = DateFormatter()
-                        formatter.dateFormat = "dd MMM yyyy at h"
-                        formatter.amSymbol = "AM"
-                        formatter.pmSymbol = "PM"
+                        formatter.dateFormat = "dd MMM yyyy hh:mm"
                         let dateStr = formatter.string(from: createDate as Date)
-                        nameAndDateLabel.text = "\(name) - \(dateStr)"
+                        nameAndDateLabel.text = "\(name) - asked \(dateStr)"
                         
                     }
                     if let thumbnailString = owner.profileImageUrl, let url = URL(string: (thumbnailString)) {

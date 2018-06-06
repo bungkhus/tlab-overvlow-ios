@@ -47,6 +47,7 @@
 		8FCC5E5320C768180015D9D6 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E5220C768180015D9D6 /* SearchItem.swift */; };
 		8FCC5E5520C769950015D9D6 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E5420C769950015D9D6 /* SearchInteractor.swift */; };
 		8FCC5E5920C788040015D9D6 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E5820C788040015D9D6 /* UIViewController+Additions.swift */; };
+		8FCC5E5C20C7BDC00015D9D6 /* SearchParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E5B20C7BDC00015D9D6 /* SearchParam.swift */; };
 		D6913ECAA3F6697432F54817 /* Pods_TLab_Overflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		8FCC5E5220C768180015D9D6 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
 		8FCC5E5420C769950015D9D6 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		8FCC5E5820C788040015D9D6 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		8FCC5E5B20C7BDC00015D9D6 /* SearchParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParam.swift; sourceTree = "<group>"; };
 		A7368541C155911D2F997147 /* Pods-TLab Overflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.release.xcconfig"; sourceTree = "<group>"; };
 		E44362F829C09B18338DD8E3 /* Pods-TLab Overflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.debug.xcconfig"; sourceTree = "<group>"; };
 		EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLab_Overflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +262,7 @@
 				8FCC5E4E20C765B10015D9D6 /* KeyedValue.swift */,
 				8FCC5E5020C767640015D9D6 /* Owner.swift */,
 				8FCC5E5220C768180015D9D6 /* SearchItem.swift */,
+				8FCC5E5B20C7BDC00015D9D6 /* SearchParam.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				8FCC5E5320C768180015D9D6 /* SearchItem.swift in Sources */,
 				8F77D41320C697A1003B26C5 /* ViewController.swift in Sources */,
 				8FCC5E4D20C7654D0015D9D6 /* BaseInteractor.swift in Sources */,
+				8FCC5E5C20C7BDC00015D9D6 /* SearchParam.swift in Sources */,
 				8FCC5E2B20C749C50015D9D6 /* ErrorHelper.swift in Sources */,
 				8FCC5E3320C749C50015D9D6 /* DateHelper.swift in Sources */,
 				8FCC5E2E20C749C50015D9D6 /* AppUtility.swift in Sources */,

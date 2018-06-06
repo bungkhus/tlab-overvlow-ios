@@ -10,26 +10,19 @@ import UIKit
 import SVPullToRefresh
 import SVProgressHUD
 import DZNEmptyDataSet
-
-struct SeachParam {
-    var tag: String
-    var pageSize: Int
-    var from: String
-    var to: String
-    
-    init(tag: String, pageSize: Int, from: String, to: String) {
-        self.tag = tag
-        self.pageSize = pageSize
-        self.from = from
-        self.to = to
-    }
-}
+import ActionSheetPicker_3_0
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     let interactor: SearchInteractor = SearchInteractor()
+    let strFormat = "yyyy-MM-dd"
+    //input
+    var tag: String?
+    var dateFrom: Date?
+    var dateTo: Date?
+    var pageSize: Int?
     
     // MARK: - OVERRIDE FUNC
     
@@ -52,11 +45,16 @@ class ViewController: UIViewController {
         tableView.emptyDataSetDelegate = self
         
         tableView.addPullToRefresh {
-            self.refresh(withTag: "ios", pageSize: 10, from: "1473811200", to: "1473897600")
+            self.refresh()
         }
         
         tableView.addInfiniteScrolling {
-            self.interactor.nextWith(withTag: "ios", pageSize: 10, from: "1473811200", to: "1473897600", success: { () -> (Void) in
+            guard let tag = self.tag, let pageSize = self.pageSize, let from = self.dateFrom, let to = self.dateTo else {
+                SVProgressHUD.showError(withStatus: "Failed to infinit scrolling becuse data does not exist.")
+                return
+            }
+            
+            self.interactor.nextWith(withTag: tag, pageSize: pageSize, from: from.toString(withFormat: self.strFormat), to: to.toString(withFormat: self.strFormat), success: { () -> (Void) in
                 self.tableView.infiniteScrollingView.stopAnimating()
                 self.tableView.showsInfiniteScrolling = self.interactor.hasNext
                 self.tableView.reloadData()
@@ -74,24 +72,44 @@ class ViewController: UIViewController {
         loadData()
     }
     
-    func refresh(withTag tag: String, pageSize: Int, from: String, to: String) {
-        interactor.refresh(withTag: tag, pageSize: pageSize, from: "1473811200", to: "1473897600", success: { () -> (Void) in
+    func refresh() {
+        guard let tag = self.tag, let pageSize = self.pageSize, let from = self.dateFrom, let to = self.dateTo else {
+            SVProgressHUD.showError(withStatus: "Error Input Data")
+            return
+        }
+        
+        let newParam = SearchParam.with(tag: tag, pageSize: pageSize, from: from, to: to)
+        self.interactor.saveModel(data: newParam!)
+        interactor.refresh(withTag: tag, pageSize: pageSize, from: from.toString(withFormat: self.strFormat), to: to.toString(withFormat: self.strFormat), success: { () -> (Void) in
             SVProgressHUD.dismiss()
             self.tableView.pullToRefreshView.stopAnimating()
             self.tableView.infiniteScrollingView.stopAnimating()
             self.tableView.showsInfiniteScrolling = self.interactor.hasNext
-            self.tableView.reloadData()
-            self.tableView.reloadEmptyDataSet()
+            self.loadData()
         }) { (error) -> (Void) in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
             SVProgressHUD.dismiss(withDelay: 3.0)
+            if error.localizedDescription.contains("Data doesn't exists") {
+                self.interactor.removeObject()
+                self.tableView.reloadData()
+                self.tableView.reloadEmptyDataSet()
+            }
             self.tableView.pullToRefreshView.stopAnimating()
             self.tableView.infiniteScrollingView.stopAnimating()
         }
     }
     
     func loadData() {
-        interactor.loadKey()
+        self.interactor.load()
+        self.interactor.loadParam()
+        if let paramSaved = self.interactor.searchParam {
+            print("param berhasil disimpan \(paramSaved.tag)")
+            self.tag = paramSaved.tag
+            self.pageSize = paramSaved.pageSize
+            self.dateFrom = paramSaved.from as? Date
+            self.dateTo = paramSaved.to as? Date
+        }
+
         tableView.reloadData()
         tableView.reloadEmptyDataSet()
     }
@@ -135,6 +153,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "InputSearchCell", for: indexPath) as! InputSearchCell
             cell.delegate = self
+            cell.tagTextField.delegate = self
+            cell.searchParam = self.interactor.searchParam
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResultSearchCell", for: indexPath) as! ResultSearchCell
@@ -170,19 +190,59 @@ extension ViewController: InputSearchCellDelegate {
     func buttonSearchPressed(tag: String, from: String, to: String, pageSize: Int) {
         self.view.endEditing(true)
         SVProgressHUD.show()
-        refresh(withTag: tag, pageSize: pageSize, from: from, to: to)
+        self.tag = tag
+        refresh()
     }
     
     func fromButtonPressed(inTextFiled textField: UITextField) {
-        textField.text = "14 Sep 2016"
+        let datePicker = ActionSheetDatePicker(title: "From:", datePickerMode: UIDatePickerMode.date, selectedDate: dateFrom ?? Date(), doneBlock: {
+            picker, value, index in
+            let date = value as! Date
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd MMM yyyy"
+            let dateStr = formatter.string(from: date as Date)
+            textField.text = dateStr
+            
+            self.dateFrom = date
+            
+            return
+        }, cancel: { ActionStringCancelBlock in return }, origin: self.view)
+        
+        datePicker?.show()
     }
     
     func toButtonPressed(inTextFiled textField: UITextField) {
-        textField.text = "15 Sep 2016"
+        let datePicker = ActionSheetDatePicker(title: "To:", datePickerMode: UIDatePickerMode.date, selectedDate: dateTo ?? Date(), doneBlock: {
+            picker, value, index in
+            let date = value as! Date
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd MMM yyyy"
+            let dateStr = formatter.string(from: date as Date)
+            textField.text = dateStr
+            
+            self.dateTo = date
+            
+            return
+        }, cancel: { ActionStringCancelBlock in return }, origin: self.view)
+        
+        datePicker?.show()
     }
     
     func pageSizeButtonPressed(inTextFiled textField: UITextField) {
-        textField.text = "10"
+        let valueArr = ["10", "20", "30", "50"]
+        var curIdx = 0
+        if let page = self.pageSize, let curPage = valueArr.index(of: "\(page)") {
+            curIdx = curPage
+        }
+        ActionSheetStringPicker.show(withTitle: "Number of Items Per Page", rows: valueArr, initialSelection: curIdx, doneBlock: {
+            _, index, value in
+
+            if let pageSize = value {
+                textField.text = pageSize as? String
+                self.pageSize = Int(textField.text!)
+            }
+            return
+        }, cancel: { ActionStringCancelBlock in return }, origin: self.view)
     }
     
     func showError(msg: String) {
@@ -190,6 +250,28 @@ extension ViewController: InputSearchCellDelegate {
         SVProgressHUD.dismiss(withDelay: 3.0)
     }
     
+    // Selector
     
+    @objc func performActionSheetClicked() {
+        
+    }
+    
+    
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+}
+
+extension Date {
+    func toString(withFormat format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        let strDate = formatter.string(from: self as Date)
+        return strDate
+    }
 }
 

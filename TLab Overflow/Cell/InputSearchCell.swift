@@ -9,7 +9,7 @@
 import UIKit
 
 protocol InputSearchCellDelegate {
-    func buttonSearchPressed(tag: String, from: String, to: String, pageSize: Int )
+    func buttonSearchPressed(tag: String, from: String, to: String, pageSize: Int)
     func fromButtonPressed(inTextFiled textField: UITextField)
     func toButtonPressed(inTextFiled textField: UITextField)
     func pageSizeButtonPressed(inTextFiled textField: UITextField)
@@ -30,10 +30,21 @@ class InputSearchCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var searchParam: SearchParam? {
+        didSet {
+            if let searchParam = searchParam {
+                if let tag = searchParam.tag {
+                    tagTextField.text = tag
+                }
+                if let from = searchParam.from as Date? {
+                    fromTextField.text = from.toString(withFormat: "dd MMM yyy")
+                }
+                if let to = searchParam.to as Date? {
+                    toTextField.text = to.toString(withFormat: "dd MMM yyy")
+                }
+                pageSize.text = "\(searchParam.pageSize)"
+            }
+        }
     }
 
     @IBAction func buttonSearchPressed(_ sender: Any) {

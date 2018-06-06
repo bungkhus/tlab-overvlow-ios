@@ -14,6 +14,10 @@ class PreferenceManager: NSObject {
     private static let ReferralId = "ReferralId"
     private static let SenderEmail = "Email"
     private static let XAuth = "X-Auth"
+    private static let Tag = "String"
+    private static let PageSize = "Int"
+    private static let From = "String"
+    private static let To = "String"
     
     static let instance = PreferenceManager()
     

@@ -18,18 +18,15 @@ class SearchInteractor: BaseInteractor {
     }
     
     var items: [SearchItem] = [SearchItem]()
+    var searchParam: SearchParam?
     
-    func loadKey() {
-        items.removeAll()
-        if let key = storeKey,
-            let keyedValue = realm.object(ofType: KeyedValue.self, forPrimaryKey: key as AnyObject),
-            let value = keyedValue.value
-        {
-            let json = JSON.init(parseJSON: value) // parse(value)
-            for child in json.arrayValue {
-                if let item = realm.object(ofType: SearchItem.self, forPrimaryKey: child.rawValue as AnyObject) {
-                    items.append(SearchItem(value: item))
-                }
+    func load() {
+        let result = realm.objects(SearchItem.self)
+        if result.count > 0 {
+            items.removeAll()
+            for dataRealm in result {
+                let data = SearchItem(value: dataRealm)
+                items.append(data)
             }
         }
     }
@@ -73,6 +70,25 @@ class SearchInteractor: BaseInteractor {
                 failure(error)
             }
         })
+    }
+    
+    func removeObject() {
+        self.items.removeAll()
+        self.removeAllModelsOf(type: SearchItem.self, filter: nil)
+    }
+    
+    //param
+    func saveParam(withParamObject searchParam: SearchParam) {
+        self.removeAllModelsOf(type: SearchParam.self, filter: nil)
+        self.saveModel(data: SearchParam(value: searchParam))
+    }
+    
+    func loadParam() {
+        let result = realm.objects(SearchParam.self).filter("identifier==\(1)").first
+        if let newsRealm = result {
+            let searchParam = SearchParam(value: newsRealm)
+            self.searchParam = searchParam
+        }
     }
     
 }
