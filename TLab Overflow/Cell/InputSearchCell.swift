@@ -28,4 +28,10 @@ class InputSearchCell: UITableViewCell {
     @IBAction func buttonSearchPressed(_ sender: Any) {
         print("search")
     }
+    @IBAction func fromButtonPressed(_ sender: Any) {
+    }
+    @IBAction func toButtonPressed(_ sender: Any) {
+    }
+    @IBAction func pageSizeButtonPressed(_ sender: Any) {
+    }
 }

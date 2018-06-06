@@ -15,6 +15,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let interactor: SearchInteractor = SearchInteractor()
+    
     // MARK: - OVERRIDE FUNC
     
     override func viewDidLoad() {
@@ -35,6 +37,47 @@ class ViewController: UIViewController {
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         
+        tableView.addPullToRefresh {
+            self.refresh()
+        }
+        
+        tableView.addInfiniteScrolling {
+            self.interactor.nextWith(withTag: "ios", pageSize: 10, from: "1473811200", to: "1473897600", success: { () -> (Void) in
+                self.tableView.infiniteScrollingView.stopAnimating()
+                self.tableView.showsInfiniteScrolling = self.interactor.hasNext
+                self.tableView.reloadData()
+                self.tableView.reloadEmptyDataSet()
+            }, failure: { (error) -> (Void) in
+                self.tableView.infiniteScrollingView.stopAnimating()
+            })
+        }
+        
+        tableView.pullToRefreshView.activityIndicatorViewColor = UIColor.gray
+        tableView.pullToRefreshView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        tableView.infiniteScrollingView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        tableView.showsInfiniteScrolling = false
+        
+        loadData()
+    }
+    
+    func refresh() {
+        interactor.refresh(withTag: "ios", pageSize: 10, from: "1473811200", to: "1473897600", success: { () -> (Void) in
+            self.tableView.pullToRefreshView.stopAnimating()
+            self.tableView.infiniteScrollingView.stopAnimating()
+            self.tableView.showsInfiniteScrolling = self.interactor.hasNext
+            self.tableView.reloadData()
+            self.tableView.reloadEmptyDataSet()
+        }) { (error) -> (Void) in
+            SVProgressHUD.showError(withStatus: error.localizedDescription)
+            self.tableView.pullToRefreshView.stopAnimating()
+            self.tableView.infiniteScrollingView.stopAnimating()
+        }
+    }
+    
+    func loadData() {
+        interactor.loadKey()
+        tableView.reloadData()
+        tableView.reloadEmptyDataSet()
     }
 
 
@@ -59,7 +102,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         default:
-            return 10
+            return interactor.items.count
         }
     }
     
@@ -78,6 +121,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResultSearchCell", for: indexPath) as! ResultSearchCell
+            cell.searchResult = interactor.items[indexPath.row]
             return cell
         }
     }
@@ -87,15 +131,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView!) -> Bool {
-        return true
-    }
-    
-    func emptyDataSetShouldDisplay(_ scrollView: UIScrollView!) -> Bool {
         return false
     }
     
+    func emptyDataSetShouldDisplay(_ scrollView: UIScrollView!) -> Bool {
+        return interactor.items.count == 0
+    }
+    
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        let title = NSAttributedString(string: "Data doesn't exists.", attributes: [NSAttributedStringKey.foregroundColor: UIColor.accent(), NSAttributedStringKey.font: UIFont.ProximaNova(size: 13)])
+        let title = NSAttributedString(string: "No Data.", attributes: [NSAttributedStringKey.foregroundColor: UIColor.accent(), NSAttributedStringKey.font: UIFont.ProximaNova(size: 13)])
         return title
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ResultSearchCell: UITableViewCell {
 
@@ -19,10 +20,33 @@ class ResultSearchCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var searchResult: SearchItem? {
+        didSet {
+            if let searchResult = searchResult {
+                if let title = searchResult.title {
+                    self.titleLabel.text = title
+                } else {
+                    
+                }
+                
+                if let owner = searchResult.owner {
+                    if let name = owner.displayName, let createDate = searchResult.createDate {
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "dd MMM yyyy at h"
+                        formatter.amSymbol = "AM"
+                        formatter.pmSymbol = "PM"
+                        let dateStr = formatter.string(from: createDate as Date)
+                        nameAndDateLabel.text = "\(name) - \(dateStr)"
+                        
+                    }
+                    if let thumbnailString = owner.profileImageUrl, let url = URL(string: (thumbnailString)) {
+                        avaImage.af_setImage(withURL: url, placeholderImage: UIImage(named: "contact"), imageTransition: .crossDissolve(0.2))
+                    } else {
+                        avaImage.image = UIImage(named: "contact")
+                    }
+                }
+            }
+        }
     }
 
 }
