@@ -11,6 +11,20 @@ import SVPullToRefresh
 import SVProgressHUD
 import DZNEmptyDataSet
 
+struct SeachParam {
+    var tag: String
+    var pageSize: Int
+    var from: String
+    var to: String
+    
+    init(tag: String, pageSize: Int, from: String, to: String) {
+        self.tag = tag
+        self.pageSize = pageSize
+        self.from = from
+        self.to = to
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "TLab Overflow"
-        
+        self.hideKeyboardWhenTappedAround()
         setupTableView()
     }
     
@@ -38,7 +52,7 @@ class ViewController: UIViewController {
         tableView.emptyDataSetDelegate = self
         
         tableView.addPullToRefresh {
-            self.refresh()
+            self.refresh(withTag: "ios", pageSize: 10, from: "1473811200", to: "1473897600")
         }
         
         tableView.addInfiniteScrolling {
@@ -60,8 +74,9 @@ class ViewController: UIViewController {
         loadData()
     }
     
-    func refresh() {
-        interactor.refresh(withTag: "ios", pageSize: 10, from: "1473811200", to: "1473897600", success: { () -> (Void) in
+    func refresh(withTag tag: String, pageSize: Int, from: String, to: String) {
+        interactor.refresh(withTag: tag, pageSize: pageSize, from: "1473811200", to: "1473897600", success: { () -> (Void) in
+            SVProgressHUD.dismiss()
             self.tableView.pullToRefreshView.stopAnimating()
             self.tableView.infiniteScrollingView.stopAnimating()
             self.tableView.showsInfiniteScrolling = self.interactor.hasNext
@@ -69,6 +84,7 @@ class ViewController: UIViewController {
             self.tableView.reloadEmptyDataSet()
         }) { (error) -> (Void) in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
+            SVProgressHUD.dismiss(withDelay: 3.0)
             self.tableView.pullToRefreshView.stopAnimating()
             self.tableView.infiniteScrollingView.stopAnimating()
         }
@@ -118,6 +134,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "InputSearchCell", for: indexPath) as! InputSearchCell
+            cell.delegate = self
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResultSearchCell", for: indexPath) as! ResultSearchCell
@@ -146,6 +163,33 @@ extension ViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     func spaceHeight(forEmptyDataSet scrollView: UIScrollView!) -> CGFloat {
         return 20
     }
+    
+}
+
+extension ViewController: InputSearchCellDelegate {
+    func buttonSearchPressed(tag: String, from: String, to: String, pageSize: Int) {
+        self.view.endEditing(true)
+        SVProgressHUD.show()
+        refresh(withTag: tag, pageSize: pageSize, from: from, to: to)
+    }
+    
+    func fromButtonPressed(inTextFiled textField: UITextField) {
+        textField.text = "14 Sep 2016"
+    }
+    
+    func toButtonPressed(inTextFiled textField: UITextField) {
+        textField.text = "15 Sep 2016"
+    }
+    
+    func pageSizeButtonPressed(inTextFiled textField: UITextField) {
+        textField.text = "10"
+    }
+    
+    func showError(msg: String) {
+        SVProgressHUD.showError(withStatus: msg)
+        SVProgressHUD.dismiss(withDelay: 3.0)
+    }
+    
     
 }
 
