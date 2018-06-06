@@ -42,6 +42,8 @@
 		8FCC5E3B20C74A8F0015D9D6 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E3A20C74A8F0015D9D6 /* Context.swift */; };
 		8FCC5E4420C751AA0015D9D6 /* InputSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E4320C751AA0015D9D6 /* InputSearchCell.swift */; };
 		8FCC5E4620C751C20015D9D6 /* ResultSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC5E4520C751C20015D9D6 /* ResultSearchCell.swift */; };
+		8FCC5E4820C752270015D9D6 /* InputSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5E4720C752270015D9D6 /* InputSearchCell.xib */; };
+		8FCC5E4A20C752420015D9D6 /* ResultSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC5E4920C752420015D9D6 /* ResultSearchCell.xib */; };
 		D6913ECAA3F6697432F54817 /* Pods_TLab_Overflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,8 @@
 		8FCC5E3A20C74A8F0015D9D6 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		8FCC5E4320C751AA0015D9D6 /* InputSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSearchCell.swift; sourceTree = "<group>"; };
 		8FCC5E4520C751C20015D9D6 /* ResultSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchCell.swift; sourceTree = "<group>"; };
+		8FCC5E4720C752270015D9D6 /* InputSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputSearchCell.xib; sourceTree = "<group>"; };
+		8FCC5E4920C752420015D9D6 /* ResultSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultSearchCell.xib; sourceTree = "<group>"; };
 		A7368541C155911D2F997147 /* Pods-TLab Overflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.release.xcconfig"; sourceTree = "<group>"; };
 		E44362F829C09B18338DD8E3 /* Pods-TLab Overflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLab Overflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLab Overflow/Pods-TLab Overflow.debug.xcconfig"; sourceTree = "<group>"; };
 		EFCAE647BCD394455A41F191 /* Pods_TLab_Overflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLab_Overflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +235,8 @@
 		8FCC5E3D20C74BBD0015D9D6 /* XIB FIles */ = {
 			isa = PBXGroup;
 			children = (
+				8FCC5E4720C752270015D9D6 /* InputSearchCell.xib */,
+				8FCC5E4920C752420015D9D6 /* ResultSearchCell.xib */,
 			);
 			path = "XIB FIles";
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCC5E1920C749C40015D9D6 /* Mark Simonson - Proxima Nova Semibold.otf in Resources */,
+				8FCC5E4A20C752420015D9D6 /* ResultSearchCell.xib in Resources */,
 				8FCC5E1A20C749C40015D9D6 /* Mark Simonson - Proxima Nova Extrabold Italic.otf in Resources */,
 				8FCC5E1820C749C40015D9D6 /* Mark Simonson - Proxima Nova Black.otf in Resources */,
 				8FCC5E1C20C749C40015D9D6 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
@@ -339,6 +346,7 @@
 				8FCC5E1520C749C40015D9D6 /* Mark Simonson - Proxima Nova Light.otf in Resources */,
 				8FCC5E1620C749C40015D9D6 /* Mark Simonson - Proxima Nova Thin Italic.otf in Resources */,
 				8F77D41B20C697A5003B26C5 /* LaunchScreen.storyboard in Resources */,
+				8FCC5E4820C752270015D9D6 /* InputSearchCell.xib in Resources */,
 				8FCC5E1220C749C40015D9D6 /* Mark Simonson - Proxima Nova Bold Italic.otf in Resources */,
 				8FCC5E1120C749C40015D9D6 /* Mark Simonson - Proxima Nova Bold.otf in Resources */,
 				8FCC5E1B20C749C40015D9D6 /* Mark Simonson - Proxima Nova Light Italic.otf in Resources */,

@@ -10,6 +10,10 @@ import UIKit
 
 class ResultSearchCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var avaImage: UIImageView!
+    @IBOutlet weak var nameAndDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

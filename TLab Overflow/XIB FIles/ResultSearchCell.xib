@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mark Simonson - Proxima Nova Light.otf">
+            <string>ProximaNova-Light</string>
+        </array>
+        <array key="Mark Simonson - Proxima Nova Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultSearchCell" rowHeight="72" id="136-v2-DYd" customClass="ResultSearchCell" customModule="TLab_Overflow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="136-v2-DYd" id="YQ2-pf-pKX">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6uv-0X-4Bi">
+                        <rect key="frame" x="15" y="8" width="345" height="55.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="marker detection and 3d model display for corresponding markers in ios(using ARkit)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47X-Bh-H6D">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="31.5"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-4Y-Caw">
+                                <rect key="frame" x="0.0" y="31.5" width="345" height="24"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact" translatesAutoresizingMaskIntoConstraints="NO" id="Gp9-4J-5xe">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="7nZ-HP-vn5"/>
+                                            <constraint firstAttribute="width" constant="24" id="oz3-GK-b6p"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bungkhus - asked 31 Jun '12 at 10PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ9-DB-vx1">
+                                        <rect key="frame" x="32" y="0.0" width="313" height="24"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6uv-0X-4Bi" firstAttribute="top" secondItem="YQ2-pf-pKX" secondAttribute="top" constant="8" id="92y-Mx-FO8"/>
+                    <constraint firstItem="6uv-0X-4Bi" firstAttribute="leading" secondItem="YQ2-pf-pKX" secondAttribute="leading" constant="15" id="NDy-6j-Kdy"/>
+                    <constraint firstAttribute="bottom" secondItem="6uv-0X-4Bi" secondAttribute="bottom" constant="8" id="Qpr-rn-Rqx"/>
+                    <constraint firstAttribute="trailing" secondItem="6uv-0X-4Bi" secondAttribute="trailing" constant="15" id="y3B-VC-FFp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="avaImage" destination="Gp9-4J-5xe" id="LiG-jQ-Twd"/>
+                <outlet property="nameAndDateLabel" destination="SJ9-DB-vx1" id="jKZ-jC-Xbl"/>
+                <outlet property="titleLabel" destination="47X-Bh-H6D" id="GpA-un-iRL"/>
+            </connections>
+            <point key="canvasLocation" x="114.5" y="-293"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="contact" width="21" height="21"/>
+    </resources>
+</document>

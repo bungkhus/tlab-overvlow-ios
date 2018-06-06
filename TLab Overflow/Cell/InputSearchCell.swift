@@ -10,6 +10,10 @@ import UIKit
 
 class InputSearchCell: UITableViewCell {
 
+    @IBOutlet weak var tagTextField: UIStackView!
+    @IBOutlet weak var fromTextField: UIStackView!
+    @IBOutlet weak var toTextField: UITextField!
+    @IBOutlet weak var pageSize: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +25,7 @@ class InputSearchCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func buttonSearchPressed(_ sender: Any) {
+        print("search")
+    }
 }
